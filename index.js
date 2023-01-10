@@ -77,6 +77,7 @@ async function run() {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
       const project = await projectsCollection.findOne(query);
+      console.log(project);
       res.json(project);
     });
   } finally {
